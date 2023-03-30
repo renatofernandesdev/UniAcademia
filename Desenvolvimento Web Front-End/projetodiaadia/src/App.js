@@ -33,6 +33,7 @@ function App() {
             </div>
             <div class="col-lg-9 content">
               <Main
+                desconto = 'sim'
                 instagram = 'instagram.com/renatodw'
                 whatsapp = '(32) 98484-5162'
               />
