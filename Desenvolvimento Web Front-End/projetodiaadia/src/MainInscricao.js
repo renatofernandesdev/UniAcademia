@@ -6,8 +6,10 @@ import React, {useState} from 'react'
 
 function Main() {
   const [contagem, setContagem] = useState(1)
-  const [mensalidade, setMensalidade] = useState(0)
+  const [mensalidade, setMensalidade] = useState(1569.17)
+
   const manipulaIdade = () => {
+   
     setContagem(contagem + 1)
     if(contagem < 30){
       setMensalidade(1569.17 - ((contagem/100) * 1569.17))
@@ -17,6 +19,24 @@ function Main() {
     }
   }
 
+  
+  const diminuiIdade = () => {
+
+  if(contagem >= 30){
+    setContagem(contagem - 1)
+    setMensalidade((1569.17 - (30/100) * 1569.17))
+  }
+  else{
+    if (contagem != 1){
+    setContagem(contagem - 1)
+    setMensalidade(1569.17 - ((contagem/100) * 1569.17))
+  }
+  else{
+    setMensalidade(1569.17)
+  }
+  }
+}
+
   return(
     <div>
       <div class="border border-5 border-info">
@@ -25,6 +45,7 @@ function Main() {
       <br/>
       <h5>Idade: {contagem}
       <button onClick={manipulaIdade} type="button" class="btn btn-primary espacoright">Aumentar Idade</button>
+      <button onClick={diminuiIdade} type="button" class="btn btn-primary espacoright">Diminuir Idade</button>
       </h5>
       <h5>Mensalidade a pagar: {mensalidade.toFixed(2)} R$</h5>
       <br/>
