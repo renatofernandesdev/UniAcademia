@@ -2,6 +2,8 @@ import Carousel from 'react-bootstrap/Carousel';
 import IMG1 from './img/img1.jpg'
 import IMG2 from './img/img2.png'
 import React, {useState} from 'react'
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 
 function Main() {
   const [contagem, setContagem] = useState(1)
@@ -94,80 +96,92 @@ function Main() {
         </div>
 
         <div class="formulario left inline-block">
-          <label>Digite seu Nome:</label>
+          <label>Digite seu Nome: </label>
           <div class="form-floating mb-3 inline-block">
-            <input type="text" class="" id="nome" placeholder="Nome"
+            <input type="text" class="form-control" id="nome" placeholder=""
                     onChange={handleChangeNome}
                     value={nome}
             />
+            <label for="nome">Nome</label>
           </div><br/>
 
-          
 
-          <label>Digite seu CPF:</label>
+          <label>Digite seu CPF:-- </label>
           <div class="form-floating mb-3 inline-block">
-            <input type="text" class="" id="cpf" placeholder="***.***.***-**"
+            <input type="text" class="form-control" id="cpf" placeholder="name@example.com"
                     onChange={handleChangeCPF}
                     value={cpf}
             />
+            <label for="cpf">CPF</label>
           </div><br/>
 
-          <label>Digite seu RG:</label>
+
+          <label>Digite seu RG:--- </label>
           <div class="form-floating mb-3 inline-block">
-            <input type="text" class="" id="rg" placeholder="**-**.***.***"
+            <input type="text" class="form-control" id="rg" placeholder="name@example.com"
                     onChange={handleChangeRG}
                     value={rg}
             />
+            <label for="rg">RG</label>
           </div><br/>
 
+          <div class="form-floating mb-3 inline-block">
+          <label>Selecione seu Curso:---- </label>
 
 
-<div class="inline-block">
-    <label>Selecione seu curso:</label><br/>
-</div>
-<div class="inline-block">
-    <select value={curso} onChange={handleChangeCurso} name="curso">
-        <option value="">Selecione</option>
-        <option value="Administração">Administração</option>
-        <option value="Arquitetura e Urbanismo">Arquitetura e Urbanismo</option>
-        <option value="Ciências Biológicas">Ciências Biológicas</option>
-        <option value="Design de Interiores">Design de Interiores</option>
-        <option value="Design de Moda">Design de Moda</option>
-        <option value="Direito">Direito</option>
-        <option value="Educação Física">Educação Física</option>
-        <option value="Engenharia Elétrica">Engenharia Elétrica</option>
-        <option value="Engenharia de Produção">Engenharia de Produção</option>
-        <option value="Engenharia de Software">Engenharia de Software</option>
-        <option value="Filosofia - Bacharelado">Filosofia - Bacharelado</option>
-        <option value="Filosofia - Licenciatura">Filosofia - Licenciatura</option>
-        <option value="Fisioterapia">Fisioterapia</option>
-        <option value="Gastronomia">Gastronomia</option>
-        <option value="Gestão de Recursos Humanos">Gestão de Recursos Humanos</option>
-        <option value="Jornalismo">Jornalismo</option>
-        <option value="Marketing">Marketing</option>
-        <option value="Nutrição">Nutrição</option>
-        <option value="Psicologia">Psicologia</option>
-        <option value="Publicidade e Propaganda">Publicidade e Propaganda</option>
-        <option value="Sistemas de Informação">Sistemas de Informação</option>
-        <option value="Teologia">Teologia</option>
+    <select name="plataforma">
+        <option value="">Escolha uma plataforma de jogos</option>
+        <option value="xbox">Xbox Series</option>
+        <option value="ps5">PS5</option>
+        <option value="nsw">Nintendo Switch</option>
+        <option value="pcg">PC Gaming</option>
     </select>
 
-</div>
 
-</div>
 
-    <br/><br/><br/><br/><br/><br/><br/><br/>
 
-      <div class="block">
+            <>
+              <Dropdown>
+                <Dropdown.Toggle id="dropdown-button-dark-example1" variant="secondary">
+                  teste
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu variant="dark">
+                  <Dropdown.Item value={curso} onToggle={handleChangeCurso} active>
+                    Engenharia
+                  </Dropdown.Item>
+                  <Dropdown.Item href="#/action-2">Filosofia</Dropdown.Item>
+                  <Dropdown.Item href="#/action-3">Nutrição</Dropdown.Item>
+                  <Dropdown.Divider />
+                  <Dropdown.Item href="#/action-4">Teste</Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+            </>
+
+
+
+            <input type="text" class="form-control" id="curso" placeholder="name@example.com"
+                    onChange={handleChangeCurso}
+                    value={curso}
+            />
+            <label for="curso">Curso</label>
+            
+          </div>
+      
+    </div>
+
+      <br/>
+
+      <div>
         <label>Nome: {nome}</label><br/>
         <label>CPF: {cpf}</label><br/>
         <label>RG: {rg}</label><br/>
         <label>Curso: {curso}</label><br/>
-      </div>
-
-      <div class="grid">
         <button onClick={handleClick} type="button" class="btn btn-success">Increver</button>
       </div>
+
+
+
 
       </div>
       <Carousel fade>
