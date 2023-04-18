@@ -1,0 +1,172 @@
+:root {
+  --golden: #C09833;
+  --light_golden: #C8AF64;
+}
+
+body{
+  margin: 0px;
+  background-color: lightgrey;
+  background-image: url('./img/fundo.jpg');
+}
+
+h1, h2, h3, h4, h4, h5, h6, p, a, label{
+  color: white;
+}
+
+a{
+  font-size: 12px;
+  text-decoration: none;
+}
+
+  a:hover{
+    text-decoration: underline;
+  }
+
+.drop_btn{
+  background-color: grey!important;
+}
+
+  .drop_btn:hover{
+    background-color: grey;
+  }
+
+  .drop_btn a{
+    background-color: lightgray;
+  }
+
+.btn1 {
+  background-color: var(--light_golden)!important;
+  border-color: var(--golden)!important;
+}
+
+.home_border {
+  border-color: var(--golden)!important;
+}
+
+.logohotel{
+  width: 100%;
+}
+
+.espaco{
+  margin-right: 5px;
+}
+
+.menudireita{
+  margin-left: 1px;
+}
+
+.container {
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: rgb(43, 48, 53);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+position: relative;
+display: inline-block;
+z-index: 10;
+}
+
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 10;
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  z-index: 10;
+  }
+
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: rgb(43, 48, 53);}
+
+.logofooter{
+  display: inline-block;
+  margin-left: 55px;
+  margin-top: 20px;
+  max-width: 20%;
+}
+
+.redes{
+  display: inline-block;
+  margin-left: 125px;
+}
+
+#inlineblock{
+  display: inline-block;
+  margin-left: 180px;
+  margin-top: -100px;
+}
+
+.rede:hover{
+margin-left: 1px;
+border: 1px solid gray;
+border-radius: 5px;
+}
+
+.espacoright{
+  margin-left: 20px;
+}
+
+.formulario{
+  display: inline-block;
+  display: left;
+}
+
+.updated{
+  margin-right: 100px;
+  width: 25rem;
+  display: inline-block;
+}
+
+.inline-block{
+  display: inline-block;
+}
+
+.left{
+  float: left;
+}
+
+.right{
+  float: right;
+}
+
+.grid{
+  display: grid;
+}
+
+.zindex10{
+  z-index: 10;
+}
+
+.fundo{
+  background-image: 'img/fundo.jpg'!important;
+}
+
+.fundofooter{
+  background-color: black;
+}
