@@ -9,7 +9,6 @@ function Header() {
               <a class="navbar-brand" href="https://www.linkedin.com/in/renato-fernandes-10bb86246">
               Renato Fernandes | Sw. Engineer</a>
               
-               
               <div class="d-lg-none">
                 <DropdownButton id="dropdown-basic-button" title="Home">
                   <Dropdown.Item href="https://www.uniacademia.edu.br">Home</Dropdown.Item>
