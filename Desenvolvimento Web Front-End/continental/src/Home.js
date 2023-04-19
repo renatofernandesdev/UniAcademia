@@ -87,22 +87,22 @@ function Main() {
 
       <Carousel fade>
         <Carousel.Item>
-          <a href="#">
+          <a href="http://encr.pw/hotelcontinental">
             <img className="d-block w-100" src={IMG1} alt="Primeiro slide"/>
           </a>
         </Carousel.Item>
         <Carousel.Item>
-          <a href="#">
+          <a href="http://encr.pw/hotelcontinental">
             <img className="d-block w-100" src={IMG2} alt="Segundo slide"/>
           </a>
         </Carousel.Item>
         <Carousel.Item>
-          <a href="#">
+          <a href="http://encr.pw/hotelcontinental">
             <img className="d-block w-100" src={IMG3} alt="Terceiro slide"/>
           </a>
         </Carousel.Item>
         <Carousel.Item>
-          <a  href="#">
+          <a href="http://encr.pw/hotelcontinental">
             <img className="d-block w-100" src={IMG4} alt="Quarto slide"/>
           </a>
         </Carousel.Item>
@@ -126,7 +126,7 @@ function Main() {
           <h4><label>Selecione seu quarto:</label></h4>
         </div>
         <div className="inline-block">
-          <div className="dropdown d-none d-lg-block">
+          <div className="dropdown">
             <button className="btn btn-primary dropdown-toggle btn1">{cama}</button>
             <div className="btn dropdown-content drop_btn btn1">
               <button className='btn btn-secondary' onClick={() =>changeCama("Padrão")}>Padrão</button>
@@ -136,17 +136,26 @@ function Main() {
             </div>
           </div>
         </div><br/><br/>
-        <div>
+        {/* Seleção de Quantidade de Camas */}
+        <div class="d-none d-lg-block">
           <h5>Camas de solteiro: {contagem}
           <button onClick={aumentarCama} type="button" class="btn btn-primary espacoright btn1">Aumentar Cama</button>
           <button onClick={diminuirCama} type="button" class="btn btn-primary espacoright btn1">Diminuir Cama</button>
           </h5>
-          <h5>Diária: R${mensalidade.toFixed(2)}</h5>
+          <h4>Diária: R${mensalidade.toFixed(2)}</h4>
+        </div>
+        {/* Seleção de Quantidade de Camas Recursiva */}
+        <div class="d-md-none">
+          <h5>Camas de solteiro: {contagem}<br/><br/>
+          <button onClick={aumentarCama} type="button" class="btn btn-primary espacoright btn1">Aumentar Cama</button>
+          <button onClick={diminuirCama} type="button" class="btn btn-primary espacoright btn1">Diminuir Cama</button>
+          </h5><br/>
+          <h4>Diária: R${mensalidade.toFixed(2)}</h4><br/>
         </div>
       </div>
 
       {/* Mostra Nome,CPF,RG e Cama */}
-      <div class="card updated right">
+      <div class="card updated right d-none d-lg-block">
         <div class="card-header">
           Cadastro da reserva
         </div>
@@ -157,6 +166,19 @@ function Main() {
           <li class="list-group-item">Cama: {updatedCama}</li>
         </ul>
       </div>
+
+      {/* Mostra Nome,CPF,RG e Cama Recursivo */}
+      <div class="card updatedrecursive d-md-none">
+        <div class="card-header">
+          Cadastro da reserva
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Nome: {updatedNome}</li>
+          <li class="list-group-item">CPF: {updatedCpf}</li>
+          <li class="list-group-item">RG: {updatedRg}</li>
+          <li class="list-group-item">Cama: {updatedCama}</li>
+        </ul>
+      </div><br/><br/>
 
       <div class="formulario left inline-block">
 
